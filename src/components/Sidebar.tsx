@@ -9,7 +9,7 @@ function Sidebar() {
   return (
     <div className={`sidebar ${isClosed ? "closed" : ""}`}>
       <div className="sidebar-header">
-        <Link to="/"><img src="../../../public/xuma-blanco.svg" alt="Logo" className={`logoSidebar ${isClosed ? "logoSidebarClosed" : ""}`} /></Link>
+        <Link to="/"><img src="/xuma-blanco.svg" alt="Logo" className={`logoSidebar ${isClosed ? "logoSidebarClosed" : ""}`} /></Link>
         <button className={`close-btn ${isClosed ? "closed-btn" : ""}`} onClick={() => setIsClosed(prev => !prev)} title="Expandir/Contraer">
           <svg><path d="M1.8 1 0 2.8v10.4L1.8 15h12.4l1.8-1.8V2.8L14.2 1zm4.805 12.2V2.8H14.2v10.4zm-1.8-10.4H1.8v10.4h3.005z"></path></svg>
         </button>

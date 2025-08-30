@@ -4,7 +4,7 @@ const Home = () => {
   return (
       <div className="caja">
         <img
-          src='../../../public/Icono Xuma.png' 
+          src='/Icono Xuma.png' 
           alt="Imagen centrada"
         />
       </div>
