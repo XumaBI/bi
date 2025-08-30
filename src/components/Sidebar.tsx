@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Section from './SectionSidebar'
-import './Sidebar.css'
+import './sidebar.css'
 import { Link } from "react-router-dom";
 
 function Sidebar() {
