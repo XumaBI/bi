@@ -1,0 +1,22 @@
+#container-app{
+  height: 100vh;
+}
+
+#content {
+  margin-left: 265px; /* 240px del sidebar + 15 del padding + 10px del margin */
+  height: 100%;
+  overflow-y: auto;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 800px;
+  padding: 0;
+  border: 0;
+  transition: margin-left 0.5s ease;
+}
+
+/* Cuando el sidebar tenga la clase .closed, ajustamos el margin-left */
+.sidebar.closed + #content {
+  margin-left: 80px;  /* 60px width cerrado */
+}
