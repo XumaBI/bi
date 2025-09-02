@@ -31,11 +31,11 @@ const EjecucionPromigas = () => {
     <div id="login-container">
       <div className="header">
         <div className="logo">
-          <img src="../../../public/xuma-blanco.svg" alt="Logo-Xuma" />
+          <img src="/xuma-blanco.svg" alt="Logo-Xuma" />
         </div>
         <div className="welcome">
           <div className="icono">
-            <img src="../../../public/iconoinforme.svg" alt="Icono" />
+            <img src="/iconoinforme.svg" alt="Icono" />
           </div>
           <h2>Informe de Ejecución</h2>
           <p>
@@ -45,8 +45,13 @@ const EjecucionPromigas = () => {
           </p>
         </div>
       </div>
+
+      <div className="box">
       <div className="login-box">
-        <h3>Autenticación</h3>
+        <span className="Titulo-box">Autenticación</span>
+      </div>
+
+      <div className="login-box">
         <input
           type="text"
           id="username"
@@ -55,6 +60,9 @@ const EjecucionPromigas = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+      </div>
+
+      <div className="login-box">
         <input
           type="password"
           id="password"
@@ -63,7 +71,11 @@ const EjecucionPromigas = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+      </div>
+
+      <div className="login-box">
         <button onClick={handleLogin}>Ingresar</button>
+      </div>
       </div>
     </div>
   );
