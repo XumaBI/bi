@@ -7,16 +7,24 @@ import Informe from "./pages/Informe";
 
 import "./App.css";
 
+// Define el tipo Usuario igual que en Login.tsx
+type Usuario = {
+  nombre: string;
+  clave: string;
+  permisos: string[];
+};
+
 function App() {
-  const [usuario, setUsuario] = useState<string | null>(null);
+  const [usuario, setUsuario] = useState<Usuario | null>(null);
 
   return (
     <div id="container-app" className="App">
       {!usuario ? (
-        <Login alIniciarSesion={(nombre) => setUsuario(nombre)} />
+        <Login alIniciarSesion={(usuario) => setUsuario(usuario)} /> 
       ) : (
         <>
-          <Sidebar />
+          <Sidebar permisos={usuario.permisos} />
+
           <div id="content">
             <Routes>
               <Route path="/" element={<Home />} />

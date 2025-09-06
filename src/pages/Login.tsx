@@ -1,13 +1,27 @@
 import "./css/Login.css";
 import { useState } from "react";
 
-const usuarios = [
-  { nombre: "xuma", clave: "2025" },
-  { nombre: "admin", clave: "1234" },
+const usuarios: Usuario[] = [
+  { 
+    nombre: "xuma", 
+    clave: "2025",
+    permisos: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa", "revision-ejecucion","revision-cargue","informe-cargues","informe360"]
+  },
+  { 
+    nombre: "admin", 
+    clave: "1234",
+    permisos: ["caribe", "hdi", "ejecucion-parcial"] 
+  },
 ];
 
+type Usuario = {
+  nombre: string;
+  clave: string;
+  permisos: string[];
+};
+
 type LoginProps = {
-  alIniciarSesion: (usuario: string) => void;
+  alIniciarSesion: (usuario: Usuario) => void;
 };
 
 export default function Login({ alIniciarSesion }: LoginProps) {
@@ -21,7 +35,7 @@ export default function Login({ alIniciarSesion }: LoginProps) {
     );
 
     if (encontrado) {
-      alIniciarSesion(encontrado.nombre);
+      alIniciarSesion(encontrado);
     } else {
       setError("Usuario o contraseña incorrecta");
     }
@@ -39,7 +53,7 @@ export default function Login({ alIniciarSesion }: LoginProps) {
           </div>
           <h2>Informe de Ejecución</h2>
           <p>
-            Bienvenido(a) al Informe de Ejecución. Por favor, utiliza este
+            Bienvenido(a) a la app de informes de Xuma Insurtech. Por favor, utiliza este
             recurso de manera responsable. Si tienes dudas, puedes contactarnos
             a <b>jtuiran@xuma.la</b>
           </p>
