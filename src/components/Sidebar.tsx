@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 
 type SidebarProps = {
   permisos: string[];
+  userName: string;
+  onLogout: () => void;
 };
 
-function Sidebar({ permisos }: SidebarProps) {
+function Sidebar({ permisos, userName, onLogout }: SidebarProps) {
   const [isClosed, setIsClosed] = useState(false);
 
   // función auxiliar para filtrar links según permisos
@@ -52,25 +54,29 @@ function Sidebar({ permisos }: SidebarProps) {
   return (
     <div className={`sidebar ${isClosed ? "closed" : ""}`}>
       <div className="sidebar-header">
-        <Link to="/">
-          <img
-            src="/xuma-blanco.svg"
-            alt="Logo"
-            className={`logoSidebar ${isClosed ? "logoSidebarClosed" : ""}`}
-          />
-        </Link>
-        <button
-          className={`close-btn ${isClosed ? "closed-btn" : ""}`}
-          onClick={() => setIsClosed((prev) => !prev)}
-          title="Expandir/Contraer"
-        >
+        <div id="logo-menu">
+          <Link to="/">
+            <img
+              src="/xuma-blanco.svg"
+              alt="Logo"
+              className={`logo-menu ${isClosed ? "logoSidebarClosed" : ""}`}
+            />
+          </Link>
+        </div>
+        <div>
+          <button
+            className={`close-btn ${isClosed ? "closed-btn" : ""}`}
+            onClick={() => setIsClosed((prev) => !prev)}
+            title="Expandir/Contraer"
+          >
           <svg>
             <path d="M1.8 1 0 2.8v10.4L1.8 15h12.4l1.8-1.8V2.8L14.2 1zm4.805 12.2V2.8H14.2v10.4zm-1.8-10.4H1.8v10.4h3.005z"></path>
           </svg>
-        </button>
+          </button>
+        </div>
       </div>
-      <h4 className="sidebar-title">Informes</h4>
-      <div className="sidebar-content">
+      <div className={`sidebar-title ${isClosed ? "Closed" : ""}`}><span>Informes</span></div>
+      <div className={`sidebar-content ${isClosed ? "Closed" : ""}`}>
         {globalLinks.length > 0 && (
           <Section
             title="Ejecución Global"
@@ -115,6 +121,13 @@ function Sidebar({ permisos }: SidebarProps) {
             links={comercialLinks}
           />
         )}
+      </div>
+      <div id="foot">
+        <div id="imagen-perfil"><i className="fa-solid fa-circle-user icono"></i></div>
+        <div id="text-foot">
+          <div id="Usuario">{userName}</div>
+          <div id="cerrar" onClick={onLogout} style={{cursor: "pointer"}}>Cerrar Sesion</div>
+        </div>
       </div>
     </div>
   );

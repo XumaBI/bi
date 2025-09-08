@@ -42,60 +42,64 @@ export default function Login({ alIniciarSesion }: LoginProps) {
   };
 
   return (
-    <div id="login-container">
-      <div className="header">
-        <div className="logo">
-          <img src="/xuma-blanco.svg" alt="Logo-Xuma" />
-        </div>
-        <div className="welcome">
-          <div className="icono">
-            <img src="/iconoinforme.svg" alt="Icono" />
+    <div id="login-container-vh">
+      <div id="login-container">
+        <div id="login">
+          <div className="header">
+            <div className="logo">
+              <img src="/xuma-blanco.svg" alt="Logo-Xuma" />
+            </div>
+            <div className="welcome">
+              <div className="icono">
+                <img src="/iconoinforme.svg" alt="Icono" />
+              </div>
+              <h2>Informe de Ejecución</h2>
+              <p>
+                Bienvenido(a) a la app de informes de Xuma Insurtech. Por favor, utiliza este
+                recurso de manera responsable. Si tienes dudas, puedes contactarnos
+                a <b>jtuiran@xuma.la</b>
+              </p>
+            </div>
           </div>
-          <h2>Informe de Ejecución</h2>
-          <p>
-            Bienvenido(a) a la app de informes de Xuma Insurtech. Por favor, utiliza este
-            recurso de manera responsable. Si tienes dudas, puedes contactarnos
-            a <b>jtuiran@xuma.la</b>
-          </p>
-        </div>
-      </div>
 
-      <div className="box">
-        <div className="login-box">
-          <span className="Titulo-box">Autenticación</span>
-        </div>
+          <div className="box">
+            <div className="login-box">
+              <span className="Titulo-box">Autenticación</span>
+            </div>
 
-        <div className="login-box">
-          <input
-            type="text"
-            id="username"
-            placeholder="Usuario"
-            required
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
+            <div className="login-box">
+              <input
+                type="text"
+                id="username"
+                placeholder="Usuario"
+                required
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
 
-        <div className="login-box">
-          <input
-            type="password"
-            id="password"
-            placeholder="Contraseña"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+            <div className="login-box">
+              <input
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
 
-        <div className="login-box">
-          <button onClick={handleLogin}>Ingresar</button>
-        </div>
+            <div className="login-box">
+              <button onClick={handleLogin}>Ingresar</button>
+            </div>
 
-        {error && (
-          <div className="login-box">
-            <p style={{ color: "red" }}>{error}</p>
+            {error && (
+              <div className="login-box">
+                <p style={{ color: "red" }}>{error}</p>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

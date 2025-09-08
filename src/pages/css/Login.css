@@ -1,4 +1,10 @@
 
+#login-container-vh{
+  display: flex;
+  width: 450px;
+  margin:  auto;
+  height: 100vh;
+}
 
 #login-container {
   display: flex;
@@ -6,14 +12,17 @@
   align-items: center;
   justify-content: center;
   background: white;
-  width: 450px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  margin:  20vh auto;
+  margin:  auto auto;
   font-family: Arial, sans-serif;
+}
+
+#login{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

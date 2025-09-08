@@ -38,11 +38,10 @@ function Informe() {
   }
 
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div id="iframe">
       <iframe
         title={id}
         src={url}
-        style={{ width: "100%", height: "100%", border: "none" }}
       />
     </div>
   );

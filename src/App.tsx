@@ -23,7 +23,11 @@ function App() {
         <Login alIniciarSesion={(usuario) => setUsuario(usuario)} /> 
       ) : (
         <>
-          <Sidebar permisos={usuario.permisos} />
+          <Sidebar 
+          permisos={usuario.permisos} 
+          userName={usuario.nombre}
+          onLogout={() => setUsuario(null)}
+          />
 
           <div id="content">
             <Routes>
