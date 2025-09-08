@@ -9,7 +9,8 @@ import "./App.css";
 
 // Define el tipo Usuario igual que en Login.tsx
 type Usuario = {
-  nombre: string;
+  nombre: string
+  usuario: string;
   clave: string;
   permisos: string[];
 };
@@ -25,7 +26,8 @@ function App() {
         <>
           <Sidebar 
           permisos={usuario.permisos} 
-          userName={usuario.nombre}
+          userName={usuario.usuario}
+          nombre={usuario.nombre}
           onLogout={() => setUsuario(null)}
           />
 

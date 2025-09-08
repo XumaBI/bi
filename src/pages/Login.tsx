@@ -3,19 +3,22 @@ import { useState } from "react";
 
 const usuarios: Usuario[] = [
   { 
-    nombre: "xuma", 
+    usuario: "jtuiran",
+    nombre: "Jesus Tuiran",
     clave: "2025",
     permisos: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa", "revision-ejecucion","revision-cargue","informe-cargues","informe360"]
   },
   { 
-    nombre: "admin", 
+    usuario: "lmiranda",
+    nombre: "Laura Miranda",
     clave: "1234",
-    permisos: ["caribe", "hdi", "ejecucion-parcial"] 
+    permisos: ["ejecucion-promigas","revision-ejecucion","revision-cargue","informe-cargues"] 
   },
 ];
 
 type Usuario = {
   nombre: string;
+  usuario: string;
   clave: string;
   permisos: string[];
 };
@@ -31,7 +34,7 @@ export default function Login({ alIniciarSesion }: LoginProps) {
 
   const handleLogin = () => {
     const encontrado = usuarios.find(
-      (u) => u.nombre === username && u.clave === password
+      (u) => u.usuario === username && u.clave === password
     );
 
     if (encontrado) {

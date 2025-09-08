@@ -6,10 +6,11 @@ import { Link } from "react-router-dom";
 type SidebarProps = {
   permisos: string[];
   userName: string;
+  nombre: string;
   onLogout: () => void;
 };
 
-function Sidebar({ permisos, userName, onLogout }: SidebarProps) {
+function Sidebar({ permisos, nombre, onLogout }: SidebarProps) {
   const [isClosed, setIsClosed] = useState(false);
 
   // función auxiliar para filtrar links según permisos
@@ -125,7 +126,7 @@ function Sidebar({ permisos, userName, onLogout }: SidebarProps) {
       <div id="foot">
         <div id="imagen-perfil"><i className="fa-solid fa-circle-user icono"></i></div>
         <div id="text-foot">
-          <div id="Usuario">{userName}</div>
+          <div id="Usuario">{nombre}</div>
           <div id="cerrar" onClick={onLogout} style={{cursor: "pointer"}}>Cerrar Sesion</div>
         </div>
       </div>
