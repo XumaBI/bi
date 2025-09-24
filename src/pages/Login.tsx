@@ -14,6 +14,12 @@ const usuarios: Usuario[] = [
     clave: "1234",
     permisos: ["ejecucion-promigas","revision-ejecucion","revision-cargue","informe-cargues"] 
   },
+  { 
+    usuario: "aacebedo",
+    nombre: "Andres Acebedo",
+    clave: "1234",
+    permisos: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa","informe-cargues"] 
+  },
 ];
 
 type Usuario = {
