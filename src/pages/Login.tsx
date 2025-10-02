@@ -20,6 +20,54 @@ const usuarios: Usuario[] = [
     clave: "1234",
     permisos: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa","informe-cargues"] 
   },
+  { 
+    usuario: "caribe",
+    nombre: "Gases del Caribe",
+    clave: "2025",
+    permisos: ["caribe"]
+  },
+  { 
+    usuario: "guajira",
+    nombre: "Gases de la Guajira",
+    clave: "c914",
+    permisos: ["guajira"] 
+  },
+  { 
+    usuario: "efigas",
+    nombre: "Efigas",
+    clave: "e741",
+    permisos: ["efigas"] 
+  },
+  { 
+    usuario: "surtigas",
+    nombre: "Surtigas",
+    clave: "s892",
+    permisos: ["surtigas"]
+  },
+  { 
+    usuario: "gdo",
+    nombre: "Gases de Occidente",
+    clave: "g327",
+    permisos: ["gdo"] 
+  },
+  { 
+    usuario: "ceo",
+    nombre: "Compañia Energetica de Occidente",
+    clave: "c560",
+    permisos: ["ceo"] 
+  },
+  { 
+    usuario: "hdi",
+    nombre: "HDI",
+    clave: "235",
+    permisos: ["hdi"] 
+  },
+  { 
+    usuario: "alfa",
+    nombre: "alfa",
+    clave: "674",
+    permisos: ["alfa"] 
+  },
 ];
 
 type Usuario = {
@@ -66,7 +114,7 @@ export default function Login({ alIniciarSesion }: LoginProps) {
               <p>
                 Bienvenido(a) a la app de informes de Xuma Insurtech. Por favor, utiliza este
                 recurso de manera responsable. Si tienes dudas, puedes contactarnos
-                a <b>jtuiran@xuma.la</b>
+                a <b>suport-bi@xuma.la</b>
               </p>
             </div>
           </div>
