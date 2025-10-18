@@ -1,4 +1,4 @@
-import "./css/Login.css";
+import "../css/Login.css";
 import { useState } from "react";
 
 const usuarios: Usuario[] = [
@@ -6,67 +6,105 @@ const usuarios: Usuario[] = [
     usuario: "jtuiran",
     nombre: "Jesus Tuiran",
     clave: "2025",
-    permisos: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa", "revision-ejecucion","revision-cargue","informe-cargues","informe360"]
+    permisosSecciones: ["informe", "integracion"],
+    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","revision","comercial","Modulo-Operaciones"],
+    permisosInformes: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa", "revision-ejecucion","revision-cargue","informe-cargues","informe360","ejecucion","revision","condiciones","activos","tramitado"]
   },
   { 
     usuario: "lmiranda",
     nombre: "Laura Miranda",
-    clave: "1234",
-    permisos: ["ejecucion-promigas","revision-ejecucion","revision-cargue","informe-cargues"] 
+    clave: "102217",
+    permisosSecciones: ["informe", "integracion"],
+    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","revision","comercial"],
+    permisosInformes: ["ejecucion-promigas","revision-ejecucion","revision-cargue","informe-cargues"] 
+  },
+  { 
+  usuario: "dpercia",
+  nombre: "Dayanna Percia",
+  clave: "120711",
+  permisosSecciones: ["informe", "integracion"],
+  permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","revision","comercial"],
+  permisosInformes: ["ejecucion-promigas"] 
   },
   { 
     usuario: "aacebedo",
     nombre: "Andres Acebedo",
-    clave: "1234",
-    permisos: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa","informe-cargues"] 
+    clave: "xuma2025",
+    permisosSecciones: ["informe", "integracion"],
+    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","comercial"],
+    permisosInformes: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa","informe-cargues"] 
+  },
+  { 
+    usuario: "cmunera",
+    nombre: "Carolina Munera",
+    clave: "promi2025",
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora"],
+    permisosInformes: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa"]
   },
   { 
     usuario: "caribe",
     nombre: "Gases del Caribe",
     clave: "2025",
-    permisos: ["caribe"]
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-distribuidora"],
+    permisosInformes: ["caribe"]
   },
   { 
     usuario: "guajira",
     nombre: "Gases de la Guajira",
     clave: "c914",
-    permisos: ["guajira"] 
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-distribuidora"],
+    permisosInformes: ["guajira"] 
   },
   { 
     usuario: "efigas",
     nombre: "Efigas",
     clave: "e741",
-    permisos: ["efigas"] 
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-distribuidora"],
+    permisosInformes: ["efigas"] 
   },
   { 
     usuario: "surtigas",
     nombre: "Surtigas",
     clave: "s892",
-    permisos: ["surtigas"]
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-distribuidora"],
+    permisosInformes: ["surtigas"]
   },
   { 
     usuario: "gdo",
     nombre: "Gases de Occidente",
     clave: "g327",
-    permisos: ["gdo"] 
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-distribuidora"],
+    permisosInformes: ["gdo"] 
   },
   { 
     usuario: "ceo",
     nombre: "Compañia Energetica de Occidente",
     clave: "c560",
-    permisos: ["ceo"] 
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-distribuidora"],
+    permisosInformes: ["ceo"] 
   },
   { 
     usuario: "hdi",
     nombre: "HDI",
     clave: "235",
-    permisos: ["hdi"] 
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-aseguradora"],
+    permisosInformes: ["hdi"] 
   },
   { 
     usuario: "alfa",
     nombre: "alfa",
     clave: "674",
-    permisos: ["alfa"] 
+    permisosSecciones: ["informe"],
+    permisosGrupo: ["ejecucion-aseguradora"],
+    permisosInformes: ["alfa"] 
   },
 ];
 
@@ -74,7 +112,9 @@ type Usuario = {
   nombre: string;
   usuario: string;
   clave: string;
-  permisos: string[];
+  permisosSecciones: string[];
+  permisosGrupo: string[];
+  permisosInformes: string[];
 };
 
 type LoginProps = {
@@ -114,7 +154,7 @@ export default function Login({ alIniciarSesion }: LoginProps) {
               <p>
                 Bienvenido(a) a la app de informes de Xuma Insurtech. Por favor, utiliza este
                 recurso de manera responsable. Si tienes dudas, puedes contactarnos
-                a <b>suport-bi@xuma.la</b>
+                a <b>support-bi@xuma.la</b>
               </p>
             </div>
           </div>

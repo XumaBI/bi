@@ -1,0 +1,34 @@
+.container-app{
+  height: 100vh;
+  background: rgb(12, 16, 23);
+}
+
+.body-app{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: auto;
+  min-width: 0;
+  background: rgb(12, 16, 23);
+  align-items: center;
+  padding: 0;
+  border: 0;
+  flex: 1;
+}
+
+.iframe{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Cuando el sidebar tenga la clase .closed, ajustamos el margin-left */
+.sidebar.closed + .content {
+  margin-left: 80px;  /* 60px width cerrado */
+}

@@ -1,0 +1,15 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f5f6fa;
+  text-size-adjust: 100%;
+  font-weight: 500;
+  line-height: 20px;
+  white-space-collapse: collapse;
+}
+
+.container-app{
+  display: flex;
+  flex-direction: column;
+}

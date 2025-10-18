@@ -1,46 +1,64 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import Informe from "./pages/Informe";
+import {Sidebar} from "./assets/components/Sidebar/Sidebar";
+import Login from "./assets/components/Login";
+import Home from "./assets/components/Home";
+import Informe from "./assets/components/Informe";
+import {Header} from "./assets/components/Header"
+import { IntegracionPage } from "./assets/components/IntegracionPages";
 
-import "./App.css";
+import "./assets/css/App.css";
 
 // Define el tipo Usuario igual que en Login.tsx
 type Usuario = {
-  nombre: string
+  nombre: string;
   usuario: string;
   clave: string;
-  permisos: string[];
+  permisosSecciones: string[];
+  permisosGrupo: string[];
+  permisosInformes: string[];
 };
 
-function App() {
+
+export function App() {
   const [usuario, setUsuario] = useState<Usuario | null>(null);
+  const [isClosed, setIsClosed] = useState(false);
 
   return (
-    <div id="container-app" className="App">
+    <div className="container-app">
+
       {!usuario ? (
         <Login alIniciarSesion={(usuario) => setUsuario(usuario)} /> 
       ) : (
         <>
-          <Sidebar 
-          permisos={usuario.permisos} 
+          <Header 
           userName={usuario.usuario}
           nombre={usuario.nombre}
-          onLogout={() => setUsuario(null)}
+          onLogout={() => console.log("Cerrar sesión")}
+          isClosed={isClosed}
+          onToggleSidebar={() => setIsClosed(!isClosed)}
           />
+          <div className="body-app">
+            <Sidebar 
+            permisosSecciones={usuario.permisosSecciones}
+            permisosGrupo={usuario.permisosGrupo}
+            permisosInformes={usuario.permisosInformes}
+            isClosed={isClosed}
+            onExpandir={() => setIsClosed(false)}
+            />
 
-          <div id="content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/informe/:id" element={<Informe />} />
-            </Routes>
+            <div className="content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/informe/:id" element={<Informe />} />
+
+                {/* Los componentes propios */}
+                <Route path="/componente/Ejecucion" element={<IntegracionPage />} />
+              </Routes>
+            </div>
           </div>
         </>
       )}
     </div>
   );
 }
-
-export default App;

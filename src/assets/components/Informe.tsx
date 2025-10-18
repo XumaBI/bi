@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./css/Login.css";
+import "../css/Login.css";
 
 const informes: Record<string, string> = {
   // Ejecucion Global
@@ -38,7 +38,7 @@ function Informe() {
   }
 
   return (
-    <div id="iframe">
+    <div className="iframe">
       <iframe
         title={id}
         src={url}
