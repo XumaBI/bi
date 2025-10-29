@@ -25,7 +25,7 @@ const columnas: GridColDef[] = [
   { field: "ebitda", headerName: "Ebitda", width: 140, editable: true },
 ];
 
-/* 
+
 const filas = [
   { id: 1, movimiento: "Venta Nueva", origen: "Canal Digital", porcentaje: 45, cant_registrada: 120, prima_registrada: 5600000 },
   { id: 2, movimiento: "Renovación", origen: "Fuerza de Ventas", porcentaje: 30, cant_registrada: 98, prima_registrada: 4200000 },
@@ -49,7 +49,7 @@ const filas = [
   { id: 20, movimiento: "Cancelación", origen: "Aliado Externo", porcentaje: 14, cant_registrada: 20, prima_registrada: 810000 }
 ];
 
- */
+
 
 export default function Ejecucion() {
 
@@ -149,6 +149,7 @@ const [fecha, setFecha] = React.useState(dayjs());
         title="Cargue Ejecución"
         columns={columnas}
         apiUrl="http://localhost:8000/api/filas"
+        data={filas}
         />
       </div>
 
