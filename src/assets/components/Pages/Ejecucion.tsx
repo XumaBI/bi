@@ -63,12 +63,13 @@ export default function Ejecucion() {
   ];
 
       const opcionesAseguradora = [
-    { value: "1", label: "GASES DEL CARIBE" },
-    { value: "2", label: "GASES DE LA GUAJIRA" },
-    { value: "3", label: "SURTIGAS" },
-    { value: "4", label: "EFIGAS" },
-    { value: "5", label: "GDO" },
-    { value: "6", label: "CEO" },
+    { value: "1", label: "ALFA" },
+    { value: "2", label: "HDI" },
+    { value: "3", label: "SURA" },
+    { value: "4", label: "GNP" },
+    { value: "5", label: "CAPILLAS LA FE" },
+    { value: "6", label: "CARDIF" },
+    { value: "7", label: "IKE" },
   ];
 
   const opcionesProducto = [
