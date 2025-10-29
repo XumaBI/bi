@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import GlobalStyles from "@mui/material/GlobalStyles"; //usado para insertar estilos generales a todos los elementos del componente
 
 import { esES } from "@mui/x-data-grid/locales";
 
@@ -153,7 +154,7 @@ const darkTheme = createTheme(
       mode: "dark",
       background: {
         default: "rgba(0, 0, 0, 0)",
-        paper: "rgba(16, 19, 24, 0)",
+        paper: "rgba(12, 16, 23, 1)",
       },
       text: {
         primary: "#e4e4e4ff",
@@ -189,6 +190,36 @@ export default function Grid({ title, columns, apiUrl, data }: CustomGridProps) 
 
   return (
     <ThemeProvider theme={darkTheme}>
+      <GlobalStyles
+        styles={(theme: any) => ({
+          // el panel del DataGrid (se renderiza en portal)
+          ".MuiDataGrid-panel, .MuiDataGrid-paper, .MuiDataGrid-panelContent, .MuiDataGrid-panelWrapper": {
+            color: `${theme.palette.text.primary} !important`,
+            backgroundColor: "rgba(21, 28, 39, 1) !important",
+          },
+
+          // textos y labels dentro del panel
+          ".MuiDataGrid-panel .MuiTypography-root, .MuiDataGrid-panel .MuiFormControlLabel-label, .MuiDataGrid-panel .MuiButton-root": {
+            color: `${theme.palette.text.primary} !important`,
+            fontSize: "12px !important",
+          },
+
+          // inputs y placeholder
+          ".MuiDataGrid-panel .MuiInputBase-input": {
+            color: `${theme.palette.text.primary} !important`,
+          },
+          ".MuiDataGrid-panel input::placeholder": {
+            color: "rgba(228,228,228,0.7) !important",
+            opacity: 1,
+
+          },
+          // el span que contiene el texto (MuiTypography dentro de ListItemText)
+          ".MuiDataGrid-menu .MuiListItemText-root .MuiTypography-root": {
+            fontSize: "12px !important",
+            lineHeight: 1.4,
+          },
+        })}
+      />
       <Box
         sx={{
           height: "100%",
