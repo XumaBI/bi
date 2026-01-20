@@ -22,9 +22,9 @@ export type Seccion = {
 export const MENU_DATA: Seccion[] = [
   // 🔹 SECCIÓN INFORMES
   {
-    name: "Informes",
+    name: "Inf. de Operación",
     iconPath: "M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z",
-    path: "/informe",
+    path: "/Operaciones",
     grupos: [
       {
         name: "Ejecución Global",
@@ -81,6 +81,57 @@ export const MENU_DATA: Seccion[] = [
     ],
   },
 
+  {
+    name: "Inf. Inteligencia de Canales",
+    iconPath: "M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z",
+    path: "/IntelicenciaCanales",
+    grupos: [
+      {
+        name: "Canal Digital",
+        iconPath: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z",
+        path: "canal-digital",
+        informes: [
+          { name: "Global", path: "digital-global", type: "informe" },
+          { name: "Caribe", path: "digital-caribe", type: "informe" },
+          { name: "Efigas", path: "digital-efigas", type: "informe" },
+          { name: "GDO", path: "digital-gdo", type: "informe" },
+          { name: "Surtigas", path: "digital-surtigas", type: "informe" },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "Inf. Ejecución Comercial",
+    iconPath: "M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z",
+    path: "/EjecucionComercial",
+    grupos: [
+      {
+        name: "Ejecucion Distribuidora",
+        iconPath: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z",
+        path: "ejecucion-comercial-gaseras",
+        informes: [
+          { name: "Gases del Caribe", path: "comercial-caribe", type: "informe" },
+          { name: "Gases de Occidente", path: "comercial-occidente", type: "informe" },
+          { name: "Efigas", path: "comercial-efigas", type: "informe" },
+          { name: "CEO", path: "comercial-ceo", type: "informe" },
+          { name: "Surtigas", path: "comercial-surtigas", type: "informe" },
+        ],
+      },
+      {
+        name: "Ejecucion Aseguradora",
+        iconPath: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z",
+        path: "ejecucion-comercial-aseguradora",
+        informes: [
+          { name: "HDI", path: "comercial-hdi", type: "informe" },
+          { name: "Alfa", path: "comercial-alfa", type: "informe" },
+          { name: "IKE", path: "comercial-ike", type: "informe" }
+        ],
+      },
+    ],
+  },
+
+  /*
   // 🔹 SECCIÓN INTEGRACIÓN
   {
     name: "Integración",
@@ -102,5 +153,6 @@ export const MENU_DATA: Seccion[] = [
       },
     ],
   },
+  */
 ];
 

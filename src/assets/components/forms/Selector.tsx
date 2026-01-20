@@ -1,44 +1,51 @@
-import React from "react";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
-interface DropdownProps {
-  label: string;                    // Título visible
-  options: { value: string; label: string }[]; // Opciones
-  value: string;                    // Valor seleccionado
-  onChange: (value: string) => void; // Evento al cambiar
-  disabled?: boolean;               // Opcional: desactivar dropdown
-  fullWidth?: boolean;              // Opcional: ocupar todo el ancho
+export interface Option<T> {
+  value: T;
+  label: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({
+interface DropdownProps<T> {
+  label: string;
+  options: Option<T>[];
+  value: T | null;
+  onChange: (value: T) => void;
+  disabled?: boolean;
+  fullWidth?: boolean;
+}
+
+function Dropdown<T extends string | number>({
   label,
   options,
   value,
   onChange,
   disabled = false,
   fullWidth = true,
-
-}) => {
+}: DropdownProps<T>) {
   return (
     <FormControl fullWidth={fullWidth} size="small" disabled={disabled}>
-      <InputLabel 
-      shrink
-      sx={{ 
-        color: "white",
-        fontSize: "12px",
-        }}>{label}</InputLabel>
+      <InputLabel
+        shrink
+        sx={{
+          color: "white",
+          fontSize: "12px",
+        }}
+      >
+        {label}
+      </InputLabel>
+
       <Select
-        value={value}
+        value={value ?? ""}
         label={label}
-        onChange={(e) => onChange(e.target.value)}
-        displayEmpty // Necesario para mostrar el placeholder
+        onChange={(e) => onChange(e.target.value as T)}
+        displayEmpty
         sx={{
           color: "white",
           borderColor: "white",
-          "& .MuiSelect-select": { 
+          "& .MuiSelect-select": {
             fontSize: "12px",
             paddingTop: "5px",
-            paddingBottom: "5px", 
+            paddingBottom: "5px",
           },
           "& .MuiOutlinedInput-notchedOutline": {
             borderColor: "rgba(255, 255, 255, 0.3)",
@@ -47,33 +54,20 @@ const Dropdown: React.FC<DropdownProps> = ({
             borderColor: "white",
           },
           "& .MuiSvgIcon-root": { color: "white" },
-          // 🔹 Esto afecta al menú desplegable
-          "& .MuiPaper-root": { 
-            backgroundColor: "#1e1e1e", // Fondo oscuro del menú
-            color: "white", // Color del texto de las opciones
-          },
         }}
         MenuProps={{
           PaperProps: {
             sx: {
               "& .MuiMenuItem-root": {
-                fontSize: "12px", // 🔹 tamaño del texto en las opciones
+                fontSize: "12px",
                 paddingTop: "4px",
                 paddingBottom: "4px",
               },
-              "& .MuiList-root": {
-                paddingTop: "4px",
-                paddingBottom: "4px",
-              },
-              "& .MuiFormLabel-root": {
-                fontSize: "5px"
-              }
             },
           },
         }}
       >
-
-        {/* 🔹 Placeholder */}
+        {/* Placeholder */}
         <MenuItem value="">
           <em style={{ color: "gray" }}>Selecciona una opción</em>
         </MenuItem>
@@ -86,6 +80,6 @@ const Dropdown: React.FC<DropdownProps> = ({
       </Select>
     </FormControl>
   );
-};
+}
 
 export default Dropdown;

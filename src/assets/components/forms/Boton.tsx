@@ -26,6 +26,7 @@ export default function Boton({
   return (
     <Button
       variant={variant}
+      
       color={color}
       size={size}
       onClick={onClick}

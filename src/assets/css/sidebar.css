@@ -8,6 +8,7 @@
 
 /* === SIDEBAR GENERAL === */
 .sidebar {
+  line-height: 20px;
   box-sizing: border-box;
   height: 100%;
   width: var(--sidebar-width);

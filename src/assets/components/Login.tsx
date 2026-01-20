@@ -6,106 +6,42 @@ const usuarios: Usuario[] = [
     usuario: "jtuiran",
     nombre: "Jesus Tuiran",
     clave: "2025",
-    permisosSecciones: ["informe", "integracion"],
-    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","revision","comercial","Modulo-Operaciones"],
-    permisosInformes: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa", "revision-ejecucion","revision-cargue","informe-cargues","informe360","ejecucion","revision","condiciones","activos","tramitado"]
-  },
-  { 
-    usuario: "lmiranda",
-    nombre: "Laura Miranda",
-    clave: "102217",
-    permisosSecciones: ["informe", "integracion"],
-    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","revision","comercial"],
-    permisosInformes: ["ejecucion-promigas","revision-ejecucion","revision-cargue","informe-cargues"] 
-  },
-  { 
-  usuario: "dpercia",
-  nombre: "Dayanna Percia",
-  clave: "120711",
-  permisosSecciones: ["informe", "integracion"],
-  permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","revision","comercial"],
-  permisosInformes: ["ejecucion-promigas"] 
-  },
-  { 
-    usuario: "aacebedo",
-    nombre: "Andres Acebedo",
-    clave: "xuma2025",
-    permisosSecciones: ["informe", "integracion"],
-    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","comercial"],
-    permisosInformes: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa","informe-cargues"] 
-  },
-  { 
-    usuario: "cmunera",
-    nombre: "Carolina Munera",
-    clave: "promi2025",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora"],
-    permisosInformes: ["ejecucion-promigas", "ejecucion-parcial", "controladas", "relacionadas", "caribe", "guajira", "efigas", "surtigas", "gdo", "ceo", "hdi", "alfa"]
-  },
-  { 
-    usuario: "caribe",
-    nombre: "Gases del Caribe",
-    clave: "2025",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["caribe"]
-  },
-  { 
-    usuario: "guajira",
-    nombre: "Gases de la Guajira",
-    clave: "c914",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["guajira"] 
-  },
-  { 
-    usuario: "efigas",
-    nombre: "Efigas",
-    clave: "e741",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["efigas"] 
-  },
-  { 
-    usuario: "surtigas",
-    nombre: "Surtigas",
-    clave: "s892",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["surtigas"]
-  },
-  { 
-    usuario: "gdo",
-    nombre: "Gases de Occidente",
-    clave: "g327",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["gdo"] 
-  },
-  { 
-    usuario: "ceo",
-    nombre: "Compañia Energetica de Occidente",
-    clave: "c560",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["ceo"] 
-  },
-  { 
-    usuario: "hdi",
-    nombre: "HDI",
-    clave: "235",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-aseguradora"],
-    permisosInformes: ["hdi"] 
-  },
-  { 
-    usuario: "alfa",
-    nombre: "alfa",
-    clave: "674",
-    permisosSecciones: ["informe"],
-    permisosGrupo: ["ejecucion-aseguradora"],
-    permisosInformes: ["alfa"] 
-  },
+    permisosSecciones: ["Operaciones", "IntelicenciaCanales", "EjecucionComercial"],
+    permisosGrupo: ["ejecucion-global","ejecucion-distribuidora","ejecucion-aseguradora","revision","comercial", "canal-digital", "ejecucion-comercial-gaseras", "ejecucion-comercial-aseguradora"],  
+    permisosInformes: [
+      "ejecucion-promigas", 
+      "ejecucion-parcial", 
+      "controladas", 
+      "relacionadas", 
+      "caribe", 
+      "guajira", 
+      "efigas", 
+      "surtigas", 
+      "gdo", 
+      "ceo", 
+      "hdi", 
+      "alfa", 
+      "revision-ejecucion",
+      "revision-cargue",
+      "informe-cargues",
+      "informe360",
+      "ejecucion",
+      "revision",
+      "digital-global",
+      "digital-caribe",
+      "digital-efigas",
+      "digital-gdo",
+      "digital-surtigas",
+      "comercial-caribe",
+      "comercial-occidente",
+      "comercial-efigas",
+      "comercial-gdo",
+      "comercial-surtigas",
+      "comercial-hdi",
+      "comercial-alfa",
+      "comercial-ike",
+    ]
+  }
 ];
 
 type Usuario = {
