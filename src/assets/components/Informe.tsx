@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "../css/Login.css";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { SinAcceso } from "./sinacceso";
+import { SinAcceso } from "./SinAcceso"; 
 
 
 
