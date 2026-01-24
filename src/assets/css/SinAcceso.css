@@ -1,0 +1,46 @@
+.sin-acceso-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 70vh;
+  background: linear-gradient(
+    180deg,
+    #0f1c24 0%,
+    #122734 100%
+  );
+}
+
+.sin-acceso-card {
+  background-color: #0c1a23;
+  border-radius: 14px;
+  padding: 2.5rem 3rem;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sin-acceso-icon {
+  width: 120px;
+  opacity: 0.9;
+}
+
+.sin-acceso-card h2 {
+  color: #e6f1f8;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.sin-acceso-card p {
+  color: #a7bfc9;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.sin-acceso-foot {
+  display: block;
+  font-size: 0.85rem;
+  color: #7fa2b5;
+}

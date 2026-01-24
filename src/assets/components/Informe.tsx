@@ -1,6 +1,11 @@
 import { useRef, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../css/Login.css";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { SinAcceso } from "./sinacceso";
+
+
 
 const informes: Record<string, string> = {
   // Ejecucion Global
@@ -53,8 +58,34 @@ const informes: Record<string, string> = {
 };
 
 function Informe() {
+  const { usuario } = useContext(AuthContext);
   const { id } = useParams<{ id: string }>();
   const url = id ? informes[id] : null;
+
+  // 🔐 1. Usuario no logueado
+  if (!usuario) {
+    return (
+      <h2 style={{ textAlign: "center", marginTop: "2rem" }}>
+        Debe iniciar sesión para ver este informe
+      </h2>
+    );
+  }
+
+  // ❌ 2. Informe no existe
+  if (!url) {
+    return (
+      <h2 style={{ textAlign: "center", marginTop: "2rem" }}>
+        Informe no encontrado
+      </h2>
+    );
+  }
+
+  // 🚫 3. Usuario sin permiso
+  if (!usuario.permisosInformes.includes(id!)) {
+    return (
+      <SinAcceso />
+    );
+  }
 
   const contenedorRef = useRef<HTMLDivElement | null>(null);
   const [isFull, setIsFull] = useState(false);
