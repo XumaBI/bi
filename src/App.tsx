@@ -23,6 +23,9 @@ type Usuario = {
 export function App() {
   const [usuario, setUsuario] = useState<Usuario | null>(null);
   const [isClosed, setIsClosed] = useState(false);
+  const handleLogout = () => {
+  setUsuario(null);
+  };
 
   return (
     <div className="container-app">
@@ -34,7 +37,7 @@ export function App() {
           <Header 
           userName={usuario.usuario}
           nombre={usuario.nombre}
-          onLogout={() => console.log("Cerrar sesión")}
+          onLogout={handleLogout}
           isClosed={isClosed}
           onToggleSidebar={() => setIsClosed(!isClosed)}
           />

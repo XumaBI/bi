@@ -129,3 +129,43 @@ input {
 .login-box button:hover {
   background: rgb(22, 70, 102);
 }
+
+/* Boton Expandir contraer */
+
+.fullscreen-btn {
+  position: absolute;
+  top: 12px;
+  transform: translateX(20px);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+
+  background: rgb(22, 70, 102);
+  color: #ffffff;
+
+  border: 1px solid rgba(12, 135, 176, 0.25);
+  border-radius: 6px;
+
+  cursor: pointer;
+  z-index: 10;
+
+  backdrop-filter: blur(6px);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+/* hover sutil */
+.fullscreen-btn:hover {
+  background: rgb(98, 134, 158);
+  box-shadow: 1px 5px 10px 1px rgba(56, 79, 129, 0.562);
+  color: rgb(255, 255, 255);
+}
+
+

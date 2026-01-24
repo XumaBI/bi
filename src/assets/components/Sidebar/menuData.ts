@@ -32,6 +32,7 @@ export const MENU_DATA: Seccion[] = [
         path: "ejecucion-global",
         informes: [
           { name: "Ejecución Promigas", path: "ejecucion-promigas", type: "informe" },
+          { name: "Ejecución Vanti", path: "ejecucion-vanti", type: "informe" },
           { name: "Ejecución Parcial", path: "ejecucion-parcial", type: "informe" },
           { name: "Ejecución Controladas", path: "controladas", type: "informe" },
           { name: "Ejecución Relacionadas", path: "relacionadas", type: "informe" },
@@ -126,6 +127,24 @@ export const MENU_DATA: Seccion[] = [
           { name: "HDI", path: "comercial-hdi", type: "informe" },
           { name: "Alfa", path: "comercial-alfa", type: "informe" },
           { name: "IKE", path: "comercial-ike", type: "informe" }
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "Inf. Experiencia al cliente",
+    iconPath: "M4 9h4v11H4zm12 4h4v7h-4zm-6-9h4v16h-4z",
+    path: "/cx",
+    grupos: [
+      {
+        name: "PQRS",
+        iconPath: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z",
+        path: "pqrs",
+        informes: [
+          { name: "Vanti", path: "pqrs-vanti", type: "informe" },
+          { name: "Promigas", path: "pqrs-promigas", type: "informe" },
+
         ],
       },
     ],
