@@ -58,10 +58,9 @@ const usuarios: Usuario[] = [
   usuario: "kmendez",
   nombre: "Karol Mendez",
   clave: "mendez2026",
-  permisosSecciones: [],
+  permisosSecciones: ["IntelicenciaCanales", "EjecucionComercial"],
   permisosGrupo: ["ejecucion-global","comercial", "canal-digital", "ejecucion-comercial-gaseras", "ejecucion-comercial-aseguradora", "pqrs"],
   permisosInformes: [
-      "ejecucion-promigas",
       "digital-global",
       "digital-caribe",
       "digital-efigas",
@@ -76,8 +75,6 @@ const usuarios: Usuario[] = [
       "comercial-hdi",
       "comercial-alfa",
       "comercial-ike",
-      "pqrs-vanti",
-      "pqrs-promigas"
     ] 
   },
   { 
