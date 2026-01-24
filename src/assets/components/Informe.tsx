@@ -39,7 +39,7 @@ const informes: Record<string, string> = {
 
   //Ejecucion Comercial
   "comercial-caribe": "https://app.powerbi.com/view?r=eyJrIjoiNjhlYzMwNGUtMTVhZC00NzAyLTkwYmMtMjZlOWIzNGQ4OTA0IiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
-  "comercial-occidente": "https://app.powerbi.com/view?r=eyJrIjoiYzQ0MWJmMjItNTgzYS00ZGZkLWJlZjQtOTc4OWRhYmVmNzkwIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
+  "comercial-gdo": "https://app.powerbi.com/view?r=eyJrIjoiYzQ0MWJmMjItNTgzYS00ZGZkLWJlZjQtOTc4OWRhYmVmNzkwIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
   "comercial-efigas": "https://app.powerbi.com/view?r=eyJrIjoiNDA4ZTM4ODYtNmNkYS00MjI4LTgwMzQtMmI1ZTUyOTYzZDk5IiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
   "comercial-ceo": "https://app.powerbi.com/view?r=eyJrIjoiYjNlZmYxNjgtMzZhNy00MTRhLWEyOGQtYTE2Nzk5MWRkNjMxIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9&disablecdnExpiration=1751404315",
   "comercial-surtigas": "https://app.powerbi.com/view?r=eyJrIjoiNjFiNDcxMmItNjAzZi00MGUzLWEyZmEtZThmZDRkODg2YjQ0IiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9&disablecdnExpiration=1751404315",

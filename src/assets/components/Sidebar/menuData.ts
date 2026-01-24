@@ -113,7 +113,7 @@ export const MENU_DATA: Seccion[] = [
         path: "ejecucion-comercial-gaseras",
         informes: [
           { name: "Gases del Caribe", path: "comercial-caribe", type: "informe" },
-          { name: "Gases de Occidente", path: "comercial-occidente", type: "informe" },
+          { name: "Gases de Occidente", path: "comercial-gdo", type: "informe" },
           { name: "Efigas", path: "comercial-efigas", type: "informe" },
           { name: "CEO", path: "comercial-ceo", type: "informe" },
           { name: "Surtigas", path: "comercial-surtigas", type: "informe" },
@@ -125,7 +125,7 @@ export const MENU_DATA: Seccion[] = [
         path: "ejecucion-comercial-aseguradora",
         informes: [
           { name: "HDI", path: "comercial-hdi", type: "informe" },
-          { name: "Alfa", path: "comercial-alfa", type: "informe" },
+          { name: "ALFA", path: "comercial-alfa", type: "informe" },
           { name: "IKE", path: "comercial-ike", type: "informe" }
         ],
       },

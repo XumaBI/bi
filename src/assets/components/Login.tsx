@@ -208,7 +208,7 @@ const usuarios: Usuario[] = [
   },
   { 
     usuario: "caribe",
-    nombre: "Gases del Caribe",
+    nombre: "Gases del Caribe S.A.",
     clave: "2025",
     permisosSecciones: ["Operaciones", "IntelicenciaCanales", "EjecucionComercial"],
     permisosGrupo: ["ejecucion-distribuidora", "canal-digital", "ejecucion-comercial-gaseras"],
@@ -216,59 +216,59 @@ const usuarios: Usuario[] = [
   },
   { 
     usuario: "guajira",
-    nombre: "Gases de la Guajira",
+    nombre: "Gases de la Guajira S.A.",
     clave: "c914",
     permisosSecciones: ["Operaciones"],
     permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["guajira"] 
+    permisosInformes: ["guajira"]
   },
   { 
     usuario: "efigas",
-    nombre: "Efigas",
+    nombre: "Efigas Gas Natural S.A.",
     clave: "e741",
-    permisosSecciones: ["Operaciones"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["efigas"] 
+    permisosSecciones: ["Operaciones", "IntelicenciaCanales", "EjecucionComercial"],
+    permisosGrupo: ["ejecucion-distribuidora", "canal-digital", "ejecucion-comercial-gaseras"],
+    permisosInformes: ["efigas", "digital-efigas","comercial-efigas"]
   },
   { 
     usuario: "surtigas",
-    nombre: "Surtigas",
+    nombre: "SURTIGAS S.A.",
     clave: "s892",
-    permisosSecciones: ["Operaciones"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["surtigas"]
+    permisosSecciones: ["Operaciones", "IntelicenciaCanales", "EjecucionComercial"],
+    permisosGrupo: ["ejecucion-distribuidora", "canal-digital", "ejecucion-comercial-gaseras"],
+    permisosInformes: ["surtigas", "digital-surtigas","comercial-surtigas"]
   },
   { 
     usuario: "gdo",
-    nombre: "Gases de Occidente",
+    nombre: "Gases de Occidente S.A.",
     clave: "g327",
-    permisosSecciones: ["Operaciones"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["gdo"] 
+    permisosSecciones: ["Operaciones", "IntelicenciaCanales", "EjecucionComercial"],
+    permisosGrupo: ["ejecucion-distribuidora", "canal-digital", "ejecucion-comercial-gaseras"],
+    permisosInformes: ["gdo", "digital-gdo", "comercial-gdo"]
   },
   { 
     usuario: "ceo",
-    nombre: "Compañia Energetica de Occidente",
+    nombre: "Compañia Energetica de Occidente S.A.S",
     clave: "c560",
-    permisosSecciones: ["Operaciones"],
-    permisosGrupo: ["ejecucion-distribuidora"],
-    permisosInformes: ["ceo"] 
+    permisosSecciones: ["Operaciones", "EjecucionComercial"],
+    permisosGrupo: ["ejecucion-distribuidora", "ejecucion-comercial-gaseras"],
+    permisosInformes: ["ceo", "comercial-ceo"]
   },
   { 
     usuario: "hdi",
-    nombre: "HDI",
+    nombre: "HDI Seguros Colombia S.A.",
     clave: "235",
-    permisosSecciones: ["Operaciones"],
-    permisosGrupo: ["ejecucion-aseguradora"],
-    permisosInformes: ["hdi"] 
+    permisosSecciones: ["Operaciones", "EjecucionComercial"],
+    permisosGrupo: ["ejecucion-aseguradora", "ejecucion-comercial-aseguradora"],
+    permisosInformes: ["hdi", "comercial-hdi"] 
   },
   { 
     usuario: "alfa",
-    nombre: "alfa",
+    nombre: "Seguros Alfa S.A.",
     clave: "674",
-    permisosSecciones: ["Operaciones"],
-    permisosGrupo: ["ejecucion-aseguradora"],
-    permisosInformes: ["alfa"] 
+    permisosSecciones: ["Operaciones", "EjecucionComercial"],
+    permisosGrupo: ["ejecucion-aseguradora", "ejecucion-comercial-aseguradora"],
+    permisosInformes: ["alfa", "comercial-alfa"] 
   },
 ];
 
