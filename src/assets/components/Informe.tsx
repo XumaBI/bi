@@ -36,11 +36,11 @@ const informes: Record<string, string> = {
   "informe360": "https://app.powerbi.com/view?r=XXXXXX10",
 
   // Digital
-  "digital-global": "https://app.powerbi.com/view?r=eyJrIjoiMzM2ZTM1NmMtOGUwZi00NDZlLWEyNGMtZjk3OGVhNjc1NDliIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
-  "digital-caribe": "https://app.powerbi.com/view?r=eyJrIjoiYmZmZTM1MDgtODI3Mi00MjJmLWE1NTQtYWQ5M2ZlNDE2YThhIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
-  "digital-efigas": "https://app.powerbi.com/view?r=eyJrIjoiZWQyYTcwZmItMjE4NC00ZGNhLWI0YTgtNDA2OTNiMTU5ZGIzIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
-  "digital-gdo": "https://app.powerbi.com/view?r=eyJrIjoiZjQzMjcyZjEtM2JlNS00NDQyLWFlMjItODFmN2RiZDA5NTdkIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
-  "digital-surtigas": "https://app.powerbi.com/view?r=eyJrIjoiOTczMmM1YjItMDVlMS00YTYzLTllZGUtMTQ3NmNmNzc0NGZmIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
+  "digital-global": "https://app.powerbi.com/view?r=eyJrIjoiMmM4OTI4NjgtZTc4ZS00YWU0LWE4YTYtODljM2I0ZTY0YzdjIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
+  "digital-caribe": "https://app.powerbi.com/view?r=eyJrIjoiNTM3YWQxMjctZWFjNS00NzlmLTg1NmQtYjdkYjM0OTRhMDgyIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
+  "digital-efigas": "https://app.powerbi.com/view?r=eyJrIjoiMTYzNDZhNGQtMWZmYS00OGUzLWE5ODctZWY0ZjgyMGI1NWQ2IiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
+  "digital-gdo": "https://app.powerbi.com/view?r=eyJrIjoiODFlODZlNDQtMTM5Ny00YzEwLWJmODgtNzE5MGRlNGJkYzYwIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
+  "digital-surtigas": "https://app.powerbi.com/view?r=eyJrIjoiYjZjZWRjZWYtZjgzYi00NWM3LWFiMjEtNjZkMTVmNjNmYmFkIiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
 
   //Ejecucion Comercial
   "comercial-caribe": "https://app.powerbi.com/view?r=eyJrIjoiNjhlYzMwNGUtMTVhZC00NzAyLTkwYmMtMjZlOWIzNGQ4OTA0IiwidCI6ImEzNmEzYmJkLTY5ZGQtNDgzNS04NTIyLTRiOTQ0MmM5YTE3NCIsImMiOjR9",
