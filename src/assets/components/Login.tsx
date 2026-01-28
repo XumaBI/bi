@@ -78,6 +78,20 @@ const usuarios: Usuario[] = [
     ] 
   },
   { 
+  usuario: "jpira",
+  nombre: "Johan Pira",
+  clave: "johan2026",
+  permisosSecciones: ["IntelicenciaCanales"],
+  permisosGrupo: ["canal-digital"],
+  permisosInformes: [
+      "digital-global",
+      "digital-caribe",
+      "digital-efigas",
+      "digital-gdo",
+      "digital-surtigas",
+    ] 
+  },
+  { 
     usuario: "aacebedo",
     nombre: "Andres Acebedo",
     clave: "xuma2025",
