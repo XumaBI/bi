@@ -130,8 +130,8 @@ const usuarios: Usuario[] = [
   usuario: "operaciones",
   nombre: "Especialistas de Operaciones",
   clave: "operaciones2026",
-  permisosSecciones: ["Operaciones"],
-  permisosGrupo: ["ejecucion-global","revision"],
+  permisosSecciones: ["Operaciones", "EjecucionComercial"],
+  permisosGrupo: ["ejecucion-global","revision","comercial"],
   permisosInformes: ["ejecucion-promigas","revision-ejecucion","revision-cargue","informe-cargues"]
   },
   { 
