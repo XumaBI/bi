@@ -89,7 +89,15 @@ const usuarios: Usuario[] = [
       "digital-efigas",
       "digital-gdo",
       "digital-surtigas",
-    ] 
+    ]
+  },
+  {
+  usuario: "operaciones",
+  nombre: "Especialistas de Operaciones",
+  clave: "operaciones2025",
+  permisosSecciones: ["Operaciones"],
+  permisosGrupo: ["ejecucion-global","revision"],
+  permisosInformes: ["ejecucion-promigas","revision-ejecucion","revision-cargue","informe-cargues"]
   },
   { 
     usuario: "aacebedo",
